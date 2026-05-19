@@ -1,6 +1,6 @@
 
 def calculate_average(b_score, f_score, d_score):
-    return (b_score + f_score + d_score)
+    return ((b_score + f_score + d_score)/3)
 
 def get_grade(average):
     if average >= 80:
@@ -34,7 +34,7 @@ f_score=  int(input("Enter the Frontend score:  "))
 d_score=  int(input("Enter the Design score:  "))
 
 
-final_report =Report_card(name, score_Backend, score_Frontend, score_Design)
+final_report =Report_card(name ,b_score, f_score, d_score)
 
 print("\nOutput:")
 print(final_report)
