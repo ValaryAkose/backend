@@ -1,6 +1,6 @@
 
-def calculate_average(b_score, f_score, d_score):
-    return ((b_score + f_score + d_score)/3)
+def calculate_average(backend , frontend , design):
+    return ((backend + frontend + design)/3)
 
 def get_grade(average):
     if average >= 80:
@@ -14,27 +14,27 @@ def get_grade(average):
     else:
         return "E"
     
-def Report_card(name,b_score, f_score, d_score):
-    avg=calculate_average(b_score, f_score, d_score)
+def Report_card(name, backend , frontend , design):
+    avg=calculate_average(backend , frontend , design)
     grade = get_grade(avg)
     
     return {
         'name': name,
-        'Backend': b_score,
-        'Frontend': f_score,
-        'Design': d_score,
+        'Backend': backend , 
+        'Frontend': frontend,
+        'Design':  design,
         'average': avg,
         'grade': grade
     }
 
 
 name= str(input("Enter student name:  "))
-b_score=  int(input("Enter the Backend score:  "))
-f_score=  int(input("Enter the Frontend score:  "))
-d_score=  int(input("Enter the Design score:  "))
+backend=  int(input("Enter the Backend score:  "))
+frontend=  int(input("Enter the Frontend score:  "))
+design=  int(input("Enter the Design score:  "))
 
 
-final_report =Report_card(name ,b_score, f_score, d_score)
+final_report =Report_card(name ,backend , frontend , design)
 
 print("\nOutput:")
 print(final_report)
